@@ -47,7 +47,7 @@ sync
 1. Plug in the sd card into Ultra96.
 2. Remember to change our U96 into SD card boot mode as below.
 
-![](/images/SDmode.png)
+![](/images/SDmode.jpg)
 
 3. You can still use `SDx Terminal` in SDx to connect the board. Power on the board and in the `SDx Terminal`, you should see the boot information as below.
 
@@ -55,12 +55,25 @@ sync
  
 ![](/images/login.png)
 
+5. Plug in a USB device into U96-v2 board.
 
+![](/images/USB.jpg)
 
+6. In `SDx Terminal`, type in the command bellow.
 
+````c
+mount /dev/mmcblk0p1 /mnt
 
+mkdir /usb1
+mount /dev/sda1 /usb1
+echo "I love ESE532" > /usb1/myfile.txt
+cd /mnt
+cp ./libsds_lib.so /usr/lib
+./usbRW.elf
+ls /usb1 -l
+````
 
-
+You should see the output file `myout.txt` under directory `/usb1`
 
 
 

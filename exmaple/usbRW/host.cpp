@@ -8,7 +8,7 @@ int main()
 	FILE * pFile;
 	char buffer [100];
 
-	pFile = fopen ("/mnt/myfile.txt" , "r");
+	pFile = fopen ("/usb1/myfile.txt" , "r");
 	if (pFile == NULL)
 		perror ("Error opening file");
 	else
@@ -20,7 +20,7 @@ int main()
 		}
 		fclose (pFile);
 	}
-	FILE *pFile_out = fopen("/mnt/myout.txt","w");
+	FILE *pFile_out = fopen("/usb1/myout.txt","w");
 	fwrite("hello,world!",1,strlen("hello,world!"),pFile_out);
 	return 0;
 }
