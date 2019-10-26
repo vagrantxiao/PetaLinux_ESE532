@@ -42,6 +42,19 @@ sync
 
 ![](/images/sdcard.png)
 
+## 4 Boot from SD Card
+
+1. Plug in the sd card into Ultra96.
+2. Remember to change our U96 into SD card boot mode as below.
+
+![](/images/SDmode.png)
+
+3. You can still use `SDx Terminal` in SDx to connect the board. Power on the board and in the `SDx Terminal`, you should see the boot information as below.
+
+4. Wait until you see `login`. The login name and password are all `root`.
+ 
+![](/images/login.png)
+
 
 
 
