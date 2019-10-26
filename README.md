@@ -44,22 +44,22 @@ sync
 
 ## 4 Boot from SD Card
 
-1. Plug in the sd card into Ultra96.
-2. Remember to change our U96 into SD card boot mode as below.
+4.1 Plug in the sd card into Ultra96.
+4.2 Remember to change our U96 into SD card boot mode as below.
 
 ![](/images/SDmode.jpg)
 
-3. You can still use `SDx Terminal` in SDx to connect the board. Power on the board and in the `SDx Terminal`, you should see the boot information as below.
+4.3 You can still use `SDx Terminal` in SDx to connect the board. Power on the board and in the `SDx Terminal`, you should see the boot information as below.
 
-4. Wait until you see `login`. The login name and password are all `root`.
+4.4 Wait until you see `login`. The login name and password are all `root`.
  
 ![](/images/login.png)
 
-5. Plug in a USB device into U96-v2 board.
+4.5 Plug in a USB device into U96-v2 board.
 
 ![](/images/USB.jpg)
 
-6. In `SDx Terminal`, type in the command bellow.
+4.6 In `SDx Terminal`, type in the command bellow.
 
 ````c
 mount /dev/mmcblk0p1 /mnt
@@ -74,6 +74,10 @@ ls /usb1 -l
 ````
 
 You should see the output file `myout.txt` under directory `/usb1`
+
+## Conclusion
+We mount a USB device to `/usb1`. In host.cpp, we can read and write all the files in that directory without other drivers.
+
 
 
 
