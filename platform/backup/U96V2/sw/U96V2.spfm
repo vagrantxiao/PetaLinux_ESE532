@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sdx:platform sdx:vendor="xilinx.com"
+              sdx:library="sdx"
+              sdx:name="U96V2"
+              sdx:version="1.0"
+              sdx:schemaVersion="1.0"
+              xmlns:sdx="http://www.xilinx.com/sdx">
+    <sdx:description>
+U96V2
+    </sdx:description>
+    <sdx:systemConfigurations sdx:defaultConfiguration="PateLinux">
+        <sdx:configuration sdx:name="standalone"
+                           sdx:displayName="standalone"
+                           sdx:defaultProcessorGroup="standalone"
+                           sdx:runtimes="cpp">
+            <sdx:description>A standalone platform for Ultra96-v2</sdx:description>
+            <sdx:bootImages sdx:default="standard">
+                <sdx:image sdx:name="standard"
+                            sdx:bif="standalone/boot/standalone.bif"
+                            sdx:readme="standalone/boot/generic.readme"
+                            />
+            </sdx:bootImages>
+            <sdx:processorGroup sdx:name="standalone"
+                                sdx:displayName="standalone"
+                                sdx:cpuType="cortex-a53"
+                                sdx:cpuInstance="psu_cortexa53_0">
+                <sdx:os sdx:name="standalone"
+                        sdx:displayName="standalone"
+                        sdx:ldscript="standalone/standalone/lscript.ld"
+                        sdx:bspConfig="standalone/standalone/system.mss"
+                />
+            </sdx:processorGroup>
+        </sdx:configuration>
+        <sdx:configuration sdx:name="PateLinux"
+                           sdx:displayName="PateLinux"
+                           sdx:defaultProcessorGroup="PetaLinux"
+                           sdx:runtimes="cpp">
+            <sdx:description></sdx:description>
+            <sdx:bootImages sdx:default="standard">
+                <sdx:image sdx:name="standard"
+                            sdx:bif="PateLinux/boot/petalinux.bif"
+                            sdx:imageData="PateLinux/PetaLinux/image"
+                            sdx:mountPath="/mnt"
+                            sdx:readme="PateLinux/boot/generic.readme"
+                            />
+            </sdx:bootImages>
+            <sdx:processorGroup sdx:name="PetaLinux"
+                                sdx:displayName="PetaLinux"
+                                sdx:cpuType="cortex-a53">
+                <sdx:os sdx:name="linux"
+                        sdx:displayName="linux"
+                />
+            </sdx:processorGroup>
+        </sdx:configuration>
+    </sdx:systemConfigurations>
+</sdx:platform>
